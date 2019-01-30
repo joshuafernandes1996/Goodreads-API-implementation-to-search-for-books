@@ -1,5 +1,10 @@
 # Goodreads
 
+<img src="https://github.com/joshuafernandes1996/Goodreads-API-implementation-to-search-for-books/blob/master/images/snapshot.PNG" width="1000px" height="400px">
+
+## API Reference
+Goodreads : [Good Reads Developer API](https://www.goodreads.com/api)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
 
 ## Development server
