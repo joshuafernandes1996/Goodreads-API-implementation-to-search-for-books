@@ -1,6 +1,6 @@
 # Goodreads
 
-<img src="https://github.com/joshuafernandes1996/Goodreads-API-implementation-to-search-for-books/blob/master/images/snapshot.PNG" width="1000px" height="400px">
+<img src="https://github.com/joshuafernandes1996/Goodreads-API-implementation-to-search-for-books/blob/master/images/snapshot.PNG" width="1000px" height="420px">
 
 ## API Reference
 Goodreads : [Good Reads Developer API](https://www.goodreads.com/api)
