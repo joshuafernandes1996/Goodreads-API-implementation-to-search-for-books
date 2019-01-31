@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background: #000;
+    margin:0;
+    min-width: 400px;
+}
+.fullstar{
+    background-image: url(./assets/1.png);
+    background-size: 15px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+.halfstar{
+    background-image: url(./assets/2.png);
+    background-size: 15px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+.quaterstar{
+    background-image: url(./assets/3.png);
+    background-size: 15px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+.emptystar{
+    background-image: url(./assets/4.png);
+    background-size: 15px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+
+#results{
+    font-size: 18px;
+}

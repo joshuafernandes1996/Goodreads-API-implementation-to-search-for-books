@@ -1,0 +1,4 @@
+#pageC{
+    background:gray;overflow:hidden;position: fixed; height:8%; bottom: 0; width:30%;
+    right:35%; border-radius: 50px;
+}
