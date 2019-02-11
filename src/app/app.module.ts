@@ -1,31 +1,47 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule} from '@angular/core';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { BooklistComponent } from './booklist/booklist.component';
 import { MenuComponent } from './menu/menu.component';
-import { PaginationComponent } from './pagination/pagination.component';
 import { DataserviceService } from './dataservice.service';
+import { HttpClientModule, HTTP_INTERCEPTORS}    from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ModuleWithProviders } from '@angular/compiler/src/core';
+import { dataInterceptor } from './interceptor'
+import { Utility } from './utility';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     BooklistComponent,
-    MenuComponent,
-    PaginationComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    NgxPaginationModule
+    NgxPaginationModule,
+    HttpClientModule,
+    FormsModule,
+    MatProgressBarModule
     
   ],
-  providers: [DataserviceService],
+  providers: [DataserviceService, Utility],
   bootstrap: [AppComponent],
   schemas: [],
-  exports: [ PaginationComponent ]
+  exports: []
 })
-export class AppModule { }
+export class AppModule { 
+  static forRoot(): ModuleWithProviders{
+    return{
+      ngModule: AppModule,
+      providers:[DataserviceService, {provide: HTTP_INTERCEPTORS,
+      useClass: dataInterceptor, multi: true}]
+    }
+  }
+}
